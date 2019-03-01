@@ -24,13 +24,15 @@ java \
       -Dhost=10.0.2.15 \
       -Dport=9130 \
       -Dport_start=9131 \
-      -Dport_end=9151 \
+      -Dport_end=9661 \
       -DdockerURL=http://localhost:4243 \
       -Dokapiurl=http://10.0.2.15:9130 \
       -jar bl/okapi/okapi-core/target/okapi-core-fat.jar dev
 ```
 
 ## Deploy Okapi Modules
+
+Important! Only run the following code one time.
 
 ```bash
 source activate folio
@@ -41,7 +43,7 @@ source deactivate folio
 ## Deploy Stripes Platform
 
 ```bash
-cd ~/Desktop/folio/ui/stripes-demo-platform
+cd ~/Desktop/folio/ui/platform-complete
 yarn start
 ```
 

@@ -14,11 +14,11 @@ Install the following software for developing on the macOS system.
 
 - [java 8 jre/jdk](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-## Dependencies Available in Brew
+## Install Dependencies Available in Brew
 
 - [maven 3.3.9 or higher](https://maven.apache.org/install.html)
-- [node 6.x or higher](https://nodejs.org/en/download/)
-- [yarn v0.20.3 or higher](https://yarnpkg.com/en/)
+- [node v11.1.0 or higher](https://nodejs.org/en/download/)
+- [yarn v1.12.1 or higher](https://yarnpkg.com/en/)
 
 ```bash
 brew install maven
@@ -26,14 +26,34 @@ brew install node
 brew install yarn
 ```
 
-Note: Make sure that you completely remove old [npm installs](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x) and [yarn installs](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn).
+## Check Versions
+
+```bash
+java -version
+mvn --version
+node -v
+yarn -version
+```
+
+## Update Dependencies
+
+Brew packages can be updated following the [FAQ](https://docs.brew.sh/FAQ),
+
+```bash
+brew update
+brew outdated
+brew upgrade
+brew upgrade <formula>
+```
+
+Make sure that you completely remove old [npm packages](https://stackoverflow.com/questions/11177954/how-do-i-completely-uninstall-node-js-and-reinstall-from-beginning-mac-os-x) and [yarn packages](https://stackoverflow.com/questions/42334978/how-do-i-uninstall-yarn).
 
 ## Postgres in Brew
 
 - [postgres 9.6](https://www.postgresql.org/)
 
 ```bash
-rm -rf rm -rf /usr/local/var/postgres
+rm -rf /usr/local/var/postgres
 rm -rf .psql_history .psqlrc .psql.local .pgpass .psqlrc.local
 brew install postgresql@9.6
 echo 'export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"' >> ~/.bash_profile
@@ -57,10 +77,10 @@ To help with the deploy process, Python can be useful.
     cd ~/Desktop
     curl "https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh" -o "Miniconda2-latest-MacOSX-x86_64.sh"
     bash Miniconda2-latest-MacOSX-x86_64.sh
-    source ~/.bash_profile
     ```
 1. Restart the terminal and then remove the shell file.
     ```bash
+    source ~/.bash_profile
     rm ~/Desktop/Miniconda2-latest-MacOSX-x86_64.sh
     ```
 1. Create and activate a Python environment.
