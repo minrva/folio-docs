@@ -57,7 +57,8 @@ cd okapi && mvn clean install
 1. Download the configuration files (i.e. `descriptors`).
     ```bash
     cd ~/Desktop/folio/bl
-    git clone https://code.library.illinois.edu/scm/fol/dev-ops.git
+    git clone https://github.com/minrva/folio-config.git
+    mv folio-config/ dev-ops
     ```
 1. **Start Docker** and then download the pre-packaged Okapi module images.
     ```bash
